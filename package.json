@@ -1,0 +1,26 @@
+{
+  "name": "micro-spa",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "dev": "yarn workspace shell run dev",
+    "build": "yarn workspace shell run build",
+    "serve": "yarn workspace shell vite preview",
+    "prepare": "husky install"
+  },
+  "workspaces": [
+    "apps/*",
+    "shell"
+  ],
+  "prettier": {},
+  "devDependencies": {
+    "husky": "^7.0.2",
+    "lint-staged": ">=10",
+    "prettier": "^2.3.2"
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
+  }
+}
